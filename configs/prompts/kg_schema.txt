@@ -1,0 +1,41 @@
+Labels (Neo4j):
+- :Component
+- :Context
+- :Measurement
+- :State
+
+Relationships (directed, Neo4j):
+- (:Measurement)-[:MEASURES]->(:Component)
+- (:Measurement)-[:ESTIMATES]->(:State)
+- (:Context)-[:SUPPLIES]->(:Measurement)
+- (:Context)-[:DEGRADES]->(:Component)
+- (:Component)-[:IS_PART_OF]->(:Component)  # optional / if present
+- (:Component)-[:HAS_PART]->(:Component)    # optional / if present
+- (:Context)-[:IS_PART_OF]->(:Context)      # optional / if present
+- (:Measurement)-[:IS_PART_OF]->(:Measurement)  # optional / if present
+
+Key properties (from kg_segments_dict.json):
+Component:
+- id, componentType, manufacturer, formFactor, ratedCapacity_Ah
+- anode, cathode, chemistry
+
+Context:
+- temperature_C, testProfile, deviceEnv, drivingScenario
+- operatingMode, operatingPhase, operatingSubphase
+- summary  # compact string for visualization (phase/subphase/mode)
+- avgC_rate, peakC_rate, voltagePlateau_V, voltageSlope_V_per_s
+- loadPulseIntensity_A, loadPulseFrequency_Hz, approxInternalResistance_Ohm
+- lifeStage, chargeDischargeMixed, regenPossible
+
+Measurement:
+- recordId, sourceFile, sheet, rowStart, rowEnd, rowRange, recordIndex, filePath
+- timeUnit, startTime_s, endTime_s, duration_s, samplingInterval_s
+- variables
+- values (stored as JSON string): time_s[], current_a[], voltage_v[], temperature_c[]
+- summary (stored as JSON string): voltage_v.*, current_a.*, temperature_c.*
+
+State:
+- recordId, stateType, method, isGroundTruth, sourceFile, filePath, recordIndex
+- values (stored as JSON string): soc[] (for SOC)
+- summary (stored as JSON string): start/end/delta (for SOC)
+- value (float, for SOH)

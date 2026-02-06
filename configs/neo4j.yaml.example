@@ -1,0 +1,11 @@
+uri: "neo4j://localhost:7687"
+user: "neo4j"
+password: "password"
+database: "battery-kg"
+
+max_connection_lifetime: 3600
+max_connection_pool_size: 50
+connection_acquisition_timeout: 30
+
+read_tx_timeout: 60
+default_limit: 100

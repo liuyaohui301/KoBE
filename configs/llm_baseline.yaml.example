@@ -1,0 +1,16 @@
+providers:
+  - name: deepseek
+    type: openai
+    api_base: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    model: "deepseek-v3.2"
+    api_key_env: "DASHSCOPE_API_KEY"
+    temperature: 0.0
+    max_tokens: null
+
+  - name: qwen
+    type: openai
+    api_base: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    model: "qwen-plus"
+    api_key_env: "DASHSCOPE_API_KEY"
+    temperature: 0.0
+    max_tokens: null

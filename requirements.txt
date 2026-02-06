@@ -1,0 +1,7 @@
+neo4j
+pydantic
+pyyaml
+pandas
+numpy
+openpyxl
+xlrd<2.0

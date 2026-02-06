@@ -1,0 +1,19 @@
+{
+  "component.chemistry": { "type": "string", "examples": ["NMC"] },
+  "component.ratedCapacity_Ah": { "type": "number", "examples": [2.0], "min": 0.5, "max": 5.0 },
+  "context.temperature_C": { "type": "number", "examples": [25.0], "min": -20.0, "max": 60.0 },
+  "context.lifeStage": { "type": "string", "examples": ["fresh", "aged"] },
+  "context.operatingSubphase": { "type": "string", "examples": ["CC", "CV", "rest"] },
+  "state.SOC.stateType": { "type": "string", "examples": ["SOC"] },
+  "state.SOH.stateType": { "type": "string", "examples": ["SOH"] },
+  "measurement.summary.voltage_v.start": { "type": "number", "examples": [3.7], "min": 2.0, "max": 4.5 },
+  "measurement.summary.voltage_v.end": { "type": "number", "examples": [3.6], "min": 2.0, "max": 4.5 },
+  "measurement.summary.voltage_v.mean": { "type": "number", "examples": [3.65], "min": 2.0, "max": 4.5 },
+  "measurement.summary.current_a.start": { "type": "number", "examples": [0.5], "min": -10.0, "max": 10.0 },
+  "measurement.summary.current_a.end": { "type": "number", "examples": [0.5], "min": -10.0, "max": 10.0 },
+  "measurement.summary.current_a.mean": { "type": "number", "examples": [0.5], "min": -10.0, "max": 10.0 },
+  "measurement.summary.temperature_c.start": { "type": "number", "examples": [25.0], "min": -20.0, "max": 60.0 },
+  "measurement.summary.temperature_c.end": { "type": "number", "examples": [25.0], "min": -20.0, "max": 60.0 },
+  "measurement.summary.temperature_c.mean": { "type": "number", "examples": [25.0], "min": -20.0, "max": 60.0 }
+}
+
