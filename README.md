@@ -2,6 +2,10 @@
 
 This repository **restores an already-instantiated Neo4j database** from a `.dump` file, then runs the KoBE pipeline.
 
+### Neo4j instance snapshot
+
+![Neo4j restored KG instance](resources/battery-kg%20instance.svg)
+
 ### What you need
 - **Neo4j desktop 2.0.5**
 - **Python 3.10+**
